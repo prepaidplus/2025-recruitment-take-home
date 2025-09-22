@@ -10,8 +10,8 @@ This exercise is designed to:
 
 NB:
 
--The backend APIs for authentication already exist. Your task will be to build the front-end authentication flow that integrates with them.
--You will be compensated for your time at the rate of a freelance junior developer being P220.00 per task completed (P880.00 if all 4 tasks are completed).
+- The backend APIs for authentication already exist. Your task will be to build the front-end authentication flow that integrates with them.
+- You will be compensated for your time at the rate of a freelance junior developer being P220.00 per task completed (P880.00 if all 4 tasks are completed).
 
 ### TIMELINE & SUPPORT
 -	Intro Meeting (Monday Afternoon)
