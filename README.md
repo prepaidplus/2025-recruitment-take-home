@@ -55,3 +55,9 @@ Category  |	Description
 - Documentation & Clarity. |	Code comments, README clarity, and setup instructions.
 - Ownership & Completeness  |	Completion of all assigned stories, evidence of going beyond minimum requirements (if any).
 
+
+### TAKE NOTE
+- https://framework7.io/
+- We inject repositories into services & usecases
+- API collection [2025 Technical assessment.postman_collection.json](2025 Technical assessment.postman_collection.json)
+
