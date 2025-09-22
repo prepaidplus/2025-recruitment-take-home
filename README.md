@@ -26,13 +26,16 @@ Login Page
 -	Form with email/username + password.
 -	Connect to backend login endpoint.
 -	Handle success (redirect to dashboard) and failure (error messages).
+
 Registration Page
 -	Form for new merchants.
 -	Integrate with backend registration endpoint.
 -	Basic form validation.
+
 Password Reset Flow
 -	Request password reset (enter email, get reset link).
 -	Form to set new password.
+
 Session Management
 -	Store auth tokens securely (store/indexedDB).
 -	Redirect unauthorized users to login.
