@@ -46,9 +46,9 @@ Session Management
 ### EVALUATION CRITERIA 
 
 Category  |	Description
-Code Quality  |	Clean, readable, modular, and idiomatic code with proper structure.
-Problem Solving & Implementation  | 	Correctness of logic, handling of edge cases, performance, and completeness of the solution.
-Project Structure & Architecture. |	Appropriate use of design patterns, separation of concerns, and overall maintainability.
-Documentation & Clarity	Code comments, README clarity, and setup instructions.
-Ownership & Completeness  |	Completion of all assigned stories, evidence of going beyond minimum requirements (if any).
+-Code Quality  |	Clean, readable, modular, and idiomatic code with proper structure.
+-Problem Solving & Implementation  | 	Correctness of logic, handling of edge cases, performance, and completeness of the solution.
+-Project Structure & Architecture. |	Appropriate use of design patterns, separation of concerns, and overall maintainability.
+-Documentation & Clarity. |	Code comments, README clarity, and setup instructions.
+-Ownership & Completeness  |	Completion of all assigned stories, evidence of going beyond minimum requirements (if any).
 
