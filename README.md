@@ -7,8 +7,11 @@ This exercise is designed to:
 -	Evaluate your ability to implement a real-world feature in a production-like environment.
 -	Test collaboration skills: seeking clarification, managing Git workflow, and structuring maintainable code.
 -	Provide you with a fair experience that mirrors how our team works day-to-day.
-The backend APIs for authentication already exist. Your task will be to build the front-end authentication flow that integrates with them.
-You will be compensated for your time at the rate of a junior developer being P220.00 per task completed (P880.00 if all 4 tasks are completed).
+
+NB:
+
+-The backend APIs for authentication already exist. Your task will be to build the front-end authentication flow that integrates with them.
+-You will be compensated for your time at the rate of a junior developer being P220.00 per task completed (P880.00 if all 4 tasks are completed).
 
 ### TIMELINE & SUPPORT
 -	Intro Meeting (Monday Afternoon)
