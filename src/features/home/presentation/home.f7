@@ -1,0 +1,593 @@
+<template>
+  <div class="page" data-name="home" style="overflow: scroll;">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title">Dashboard</div>
+        <div class="right">
+          <a href="#" class="link icon-only">
+            <i class="icon f7-icons">person_crop_circle</i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="block">
+      <h2 class="section-title">Filters</h2>
+      <h2 class="section-title">Reporting Stats</h2>
+      <div class="grid grid-cols-4 gap-4">
+
+        <!-- Report Type Dropdown -->
+        <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 8px; width: 200px; height: 50px;">
+          <div class="item-inner" style="position: relative;">
+            <div class="item-title item-label" style="font-size: 14px; margin-bottom: px;">Report Type</div>
+            <div style="position: relative;">
+              <select style="
+                width: 152%;
+                padding: 8px 30px 8px 10px;
+            
+                border-radius: 4px;
+                background-color: white;
+                appearance: none;
+                -webkit-appearance: none;
+                font-size: 14px;
+                color: #333;
+                height: 36px;
+              ">
+                <option>Hourly Itemized</option>
+                <option>Daily Summary</option>
+              </select>
+              <i class="f7-icons" style="
+                position: absolute;
+                right: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #666;
+                font-size: 14px;
+              ">chevron_down</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Providers Dropdown -->
+        <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 8px; width: 250px; height: 50px;">
+          <div class="item-inner" style="position: relative;">
+            <div class="item-title item-label" style="font-size: 14px; margin-bottom: px;">Multiple Providers Selected
+            </div>
+            <div style="position: relative;">
+              <select style="
+                width: 152%;
+                padding: 8px 30px 8px 10px;
+            
+                border-radius: 4px;
+                background-color: white;
+                appearance: none;
+                -webkit-appearance: none;
+                font-size: 14px;
+                color: #333;
+                height: 36px;
+              ">
+                <option>Orange</option>
+                <option>Mascom</option>
+                <option>BTC</option>
+              </select>
+              <i class="f7-icons" style="
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #666;
+                font-size: 14px;
+              ">chevron_down</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accounts Dropdown -->
+        <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 8px; width: 250px; height: 50px;">
+          <div class="item-inner" style="position: relative;">
+            <div class="item-title item-label" style="font-size: 14px; margin-bottom: px;">Multiple Accounts Selected
+            </div>
+            <div style="position: relative;">
+              <select style="
+                        width: 152%;
+                        padding: 8px 30px 8px 10px;
+                    
+                        border-radius: 4px;
+                        background-color: white;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        font-size: 14px;
+                        color: #333;
+                        height: 36px;
+                      ">
+                <option>FNB</option>
+                <option>Choppies</option>
+                <option></option>
+              </select>
+              <i class="f7-icons" style="
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        pointer-events: none;
+                        color: #666;
+                        font-size: 14px;
+                      ">chevron_down</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Date Range Picker -->
+        <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 8px; width: 250px; height: 50px;">
+          <div class="item-inner">
+            <div class="item-title item-label">Date Range</div>
+            <div class="item-input-wrap" style="position: relative;">
+              <input type="datetime-local" placeholder="Please choose..." style="padding-right: 32px;">
+              <i class="icon demo-list-icon"
+                style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); pointer-events: none;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="grid grid-cols-3 gap-3">
+        <!-- Card 1: Total Merchants -->
+        <div style="
+              background: #002060;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 32, 96, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">chart_bar_circle_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">12,845</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Transaction Value</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Active Today -->
+        <div style="
+              background: #007A33;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 122, 51, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">checkmark_circle_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">1,243</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Successful Value</div>
+          </div>
+        </div>
+
+        <!-- Card 3: New Registrations -->
+        <div style="
+              background: #E67C30;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(230, 124, 48, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">xmark_circle_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">28</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Failure Value</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Successful Transactions -->
+        <div style="
+              background: #5B2C6F;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(91, 44, 111, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">chart_bar_circle_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">9,452</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Transaction Volume</div>
+          </div>
+        </div>
+
+        <!-- Card 5: Failed Transactions -->
+        <div style="
+              background: #C0392B;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(192, 57, 43, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">checkmark_circle_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">127</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Successful Volume</div>
+          </div>
+        </div>
+
+        <!-- Card 6: Transaction Value -->
+        <div style="
+              background: #1A5276;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(26, 82, 118, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">xmark_circle_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">5,200</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Failure Volume</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+
+      <div class="grid grid-cols-2 grid-gap">
+        <div class="card">
+          <div style="font-size: 14px; opacity: 0.85;color: black;">Total Daily Transaction</div>
+          <div class="block block-strong-ios block-outline-ios">
+            <div class="col-50 text-align-center">
+              <div class="gauge gauge-init" data-type="circle" data-value="0.12" data-value-text="P3,492"
+                data-value-text-color="#002060" data-border-color="#ffc000" data-label-text="Total Transactions"
+                data-label-text-color="#002060" data-label-font-weight="700">
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="card">
+          <div class="card-content card-content-padding">
+            <div style="font-size: 14px; opacity: 0.85;color: black;">Weekly Transactions</div>
+            <canvas id="lineChart" width="100%" height="50"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Merchants Stats Section -->
+    <div class="block">
+      <h2 class="section-title">Merchants Stats</h2>
+      <div class="grid grid-cols-3 gap-3">
+
+        <!-- Card 1: Total Merchants -->
+        <div style="
+              background: #5D4037;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(93, 64, 55, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">person_3_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">1,248</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Merchants</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Active Today -->
+        <div style="
+              background: #0288D1;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(2, 136, 209, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">person_crop_circle_fill_badge_checkmark</i>
+            <div style="font-size: 28px; font-weight: 700;">892</div>
+            <div style="font-size: 14px; opacity: 0.85;">Active Today</div>
+          </div>
+        </div>
+
+        <!-- Card 3: New Registrations -->
+        <div style="
+              background: #7B1FA2;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(123, 31, 162, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">person_badge_plus_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">24</div>
+            <div style="font-size: 14px; opacity: 0.85;">New This Week</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Top Performing -->
+        <div style="
+              background: #388E3C;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(56, 142, 60, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">trophy_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">P142,853</div>
+            <div style="font-size: 14px; opacity: 0.85;">Top Merchant Volume</div>
+          </div>
+        </div>
+
+        <!-- Card 5: Average Transactions -->
+        <div style="
+              background: #E64A19;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(230, 74, 25, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">chart_bar_alt_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">P3,248</div>
+            <div style="font-size: 14px; opacity: 0.85;">Avg. Merchant Value</div>
+          </div>
+        </div>
+
+        <!-- Card 6: Commission Earned -->
+        <div style="
+              background: #0097A7;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 151, 167, 0.15);
+              padding: 24px;
+              text-align: center;
+              color: white;
+              margin: 12px;
+            ">
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+              ">
+            <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">money_dollar_circle_fill</i>
+            <div style="font-size: 28px; font-weight: 700;">P28,572</div>
+            <div style="font-size: 14px; opacity: 0.85;">Total Commission</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+       <!-- Use this for your Merchants by City and Weekly Transactions cards -->
+    <div class="block">
+      <div class="grid grid-cols-2 grid-gap">
+        <!-- Pie Chart: Merchants by City -->
+        <div class="card">
+          <div class="card-content card-content-padding">
+            <div style="font-size: 14px; opacity: 0.85; color: black;">Total Merchants by City</div>
+            <div class="block block-strong-ios block-outline-ios" style="display: flex; justify-content: center;">
+              <canvas id="merchantsPieChart" width="400" height="400" style="display: block; margin: 0 auto;"></canvas>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Weekly Transactions Bar Chart -->
+               <div class="card">
+          <div class="card-content card-content-padding">
+            <div style="font-size: 14px; opacity: 0.85; color: black;">Merchant by region</div>
+            <div class="block block-strong-ios block-outline-ios" style="display: flex; justify-content: center;">
+              <canvas id="merchantBarChart" width="400" height="400" style="display: block; margin: 24px auto 0 auto;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Merchants Stats Section -->
+           <!-- Transaction Stats Section as Cards -->
+      <div class="block">
+        <h2 class="section-title">Transaction Stats</h2>
+        <div class="grid grid-cols-4 gap-3">
+          <!-- Card 1: Sales Total -->
+          <div style="background: #007A33; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,122,51,0.15); padding: 24px; text-align: center; color: white; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">creditcard_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">967.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Sales Total</div>
+            </div>
+          </div>
+          <!-- Card 2: Failed -->
+          <div style="background: #C0392B; border-radius: 12px; box-shadow: 0 4px 12px rgba(192,57,43,0.15); padding: 24px; text-align: center; color: white; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">xmark_circle_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">0.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Failed</div>
+            </div>
+          </div>
+          <!-- Card 3: Commissions -->
+          <div style="background: #FFC000; border-radius: 12px; box-shadow: 0 4px 12px rgba(255,192,0,0.15); padding: 24px; text-align: center; color: #333; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9; color: #007A33;">money_dollar_circle_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">0.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Commissions</div>
+            </div>
+          </div>
+          <!-- Card 4: Deposits -->
+          <div style="background: #0288D1; border-radius: 12px; box-shadow: 0 4px 12px rgba(2,136,209,0.15); padding: 24px; text-align: center; color: white; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">arrow_down_circle_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">5,315.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Deposits</div>
+            </div>
+          </div>
+          <!-- Card 5: Reversals -->
+          <div style="background: #7B1FA2; border-radius: 12px; box-shadow: 0 4px 12px rgba(123,31,162,0.15); padding: 24px; text-align: center; color: white; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">arrow_uturn_left_circle_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">0.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Reversals</div>
+            </div>
+          </div>
+          <!-- Card 6: Withdrawals -->
+          <div style="background: #E67C30; border-radius: 12px; box-shadow: 0 4px 12px rgba(230,124,48,0.15); padding: 24px; text-align: center; color: white; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">arrow_up_circle_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">0.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Withdrawals</div>
+            </div>
+          </div>
+          <!-- Card 7: Contracts -->
+          <div style="background: #5B2C6F; border-radius: 12px; box-shadow: 0 4px 12px rgba(91,44,111,0.15); padding: 24px; text-align: center; color: white; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">doc_text_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">0.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Contracts</div>
+            </div>
+          </div>
+          <!-- Card 8: Transfers -->
+          <div style="background: #0097A7; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,151,167,0.15); padding: 24px; text-align: center; color: white; margin: 12px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+              <i class="icon f7-icons" style="font-size: 36px; opacity: 0.9;">arrow_right_arrow_left_circle_fill</i>
+              <div style="font-size: 28px; font-weight: 700;">0.00</div>
+              <div style="font-size: 14px; opacity: 0.85;">Transfers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Added Circle Gauges Block -->
+          <!-- Added Circle Gauges Block -->
+                   <h2 class="section-title">Triggers Stats</h2>
+          <div class="grid grid-cols-2 grid-gap">
+            <!-- Gauge Card 1 -->
+            <div class="card">
+              <div class="card-content card-content-padding text-align-center">
+                <div class="gauge gauge-init" data-type="circle" data-value="0.12" data-value-text="P435,572"
+                  data-value-text-color="#002060" data-border-color="#ffc000" data-label-text="KAZANG"
+                  data-label-text-color="#002060" data-label-font-weight="700"></div>
+              </div>
+            </div>
+            <!-- Gauge Card 2 -->
+            <div class="card">
+              <div class="card-content card-content-padding text-align-center">
+                <div class="gauge gauge-init" data-type="circle" data-value="0.12" data-value-text="P3,492"
+                  data-value-text-color="#002060" data-border-color="#ffc000" data-label-text="BPC"
+                  data-label-text-color="#002060" data-label-font-weight="700"></div>
+              </div>
+            </div>
+            <!-- Bar Chart Card -->
+            <div class="card">
+              <div class="card-content card-content-padding text-align-center">
+                <div style="font-size: 14px; opacity: 0.85; margin-bottom: 8px;">Trigger Events (Bar)</div>
+                <canvas id="triggerBarChart" width="220" height="120" style="display: block; margin: 0 auto;"></canvas>
+              </div>
+            </div>
+            <!-- Line Chart Card -->
+            <div class="card">
+              <div class="card-content card-content-padding text-align-center">
+                <div style="font-size: 14px; opacity: 0.85; margin-bottom: 8px;">Trigger Trends (Line)</div>
+                <canvas id="triggerLineChart" width="220" height="120" style="display: block; margin: 0 auto;"></canvas>
+              </div>
+            </div>
+            <!-- Pie Chart Card -->
+            <div class="card">
+              <div class="card-content card-content-padding text-align-center">
+                <div style="font-size: 14px; opacity: 0.85; margin-bottom: 8px;">Trigger Distribution (Pie)</div>
+                <canvas id="triggerPieChart" width="180" height="120" style="display: block; margin: 0 auto;"></canvas>
+              </div>
+            </div>
+            <!-- Doughnut Chart Card -->
+            <div class="card">
+              <div class="card-content card-content-padding text-align-center">
+                <div style="font-size: 14px; opacity: 0.85; margin-bottom: 8px;">Trigger Status (Doughnut)</div>
+                <canvas id="triggerDoughnutChart" width="180" height="120" style="display: block; margin: 0 auto;"></canvas>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  </div>
+
+</template>
