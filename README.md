@@ -59,5 +59,6 @@ Category  |	Description
 ### TAKE NOTE
 - https://framework7.io/
 - We inject repositories into services & usecases
-- API collection [2025 Technical assessment.postman_collection.json](2025 Technical assessment.postman_collection.json)
-
+- API collection [assessment.postman_collection.json](assessment.postman_collection.json)
+- Testing user with admin rights Email: testing.user@prepaidplus.co.bw, Password: 12345678 (to help during creation of users)
+- Users can not self register thier accounts but have them created by an admin user who already has admin rights hence credentials above

@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"definition\": \"createUser\",\n    \"data\": {\n        \"firstName\": \"string\",\n        \"lastName\": \"string\",\n        \"email\": \"string\",\n        \"account\": \"string\",\n        \"createdby\": \"string\",\n        \"group\": \"string\",\n        \"password\": \"string\",\n        \"role\": \"string\",\n        \"userType\": \"string\",\n        \"currentUserUid\": \"string\"\n    }\n}",
+					"raw": "{\n    \"definition\": \"createUser\",\n    \"data\": {\n        \"firstName\": \"string\",\n        \"lastName\": \"string\",\n        \"email\": \"string\",\n        \"account\": \"string\", //e.g 8 digit number or PrepaidPlus\n        \"createdby\": \"string\",\n        \"group\": \"string\", // PrepaidPlus or any\n        \"password\": \"string\",\n        \"role\": \"string\", // Administrator or Supervisor\n        \"userType\": \"string\", // Merchant or PrepaidPlus\n        \"currentUserUid\": \"string\" //sent back on login\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
