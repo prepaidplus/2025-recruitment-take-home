@@ -18,9 +18,9 @@ NB:
 -	Kick-off call with senior dev (overview, setup help, Q&A)
 -	Assessment Duration: 4 Days (Monday – Thursday)
 -	Be prepared to walk us through your code during the Friday/Saturday session
-You will work independently, but you are encouraged to reach out for clarification via call, email, or WhatsApp.
-Any changes must be committed and pushed to the designated GitHub repo with appropriate documentation.
-You will be provided a framework7 codebase, postman collection, and a github repo to work with.
+- You will work independently, but you are encouraged to reach out for clarification via call, email, or WhatsApp.
+- Any changes must be committed and pushed to a branch titled with your first name to the designated GitHub repo with appropriate documentation.
+- You will be provided a framework7 codebase, postman collection, and a github repo to work with.
 
 
 ### DELIVERABLES
