@@ -60,5 +60,34 @@ Category  |	Description
 - https://framework7.io/
 - We inject repositories into services & usecases
 - API collection [assessment.postman_collection.json](assessment.postman_collection.json)
-- Testing user with admin rights Email: testing.user@prepaidplus.co.bw, Password: 12345678 (to help during creation of users)
+- Testing user with admin rights Email: testing.user@prepaidplus.co.bw, Password: aP+gUFV7ArbEZx+4GfvpaA==:GHfqQIKB0kxvblc4fdQ/jg== (to help during creation of users) NB: this password is already encrypted
 - Users can not self register thier accounts but have them created by an admin user who already has admin rights hence credentials above
+- For future passwords encryptions which will be required to login use the code below or its equivallant 
+
+<pre> ```javascript
+    const config = { hashingSecret: "thisIsASecret" };
+    const crypto = require("crypto");
+
+    decryptString(encryptedString, secret = config.hashingSecret) {
+        if (
+            typeof encryptedString === "string" &&
+            encryptedString.includes(":")
+        ) {
+            const [ivBase64, encryptedData] = encryptedString.split(":");
+            const iv = Buffer.from(ivBase64, "base64");
+            const key = crypto.createHash("sha256").update(secret).digest();
+
+            const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
+
+            let decrypted = decipher.update(encryptedData, "base64", "utf8");
+            decrypted += decipher.final("utf8");
+
+            return decrypted;
+        } else {
+            return false;
+        }
+    }
+``` </pre>
+
+
+
