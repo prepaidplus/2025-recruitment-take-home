@@ -1,9 +1,9 @@
 {
   "name": "prepaid-merchant-portal",
-  "private": true,
   "version": "1.0.0",
   "description": "Prepaid+ Merchant Portal",
   "repository": "",
+  "main": "src/js/app.js",
   "license": "UNLICENSED",
   "scripts": {
     "format": "prettier --write src",

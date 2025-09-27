@@ -1,8 +1,5 @@
 {
-  "cwd": "/Users/keabetswethomasmambule/Documents/My Docs/codes/prepaid+/prepaid-mono-repo/merchant-portal",
-  "type": [
-    "web"
-  ],
+  "type": "webapp",
   "name": "Prepaid+ Merchant Portal",
   "framework": "core",
   "template": "split-view",
@@ -14,5 +11,21 @@
     "darkMode": false,
     "iconFonts": true
   },
-  "customBuild": false
+  "customBuild": false,
+  "version": "1.0.0",
+  "build": {
+    "source": "src/",
+    "output": "www/",
+    "js": {
+      "minify": true
+    },
+    "css": {
+      "minify": true
+    }
+  },
+  "devServer": {
+    "port": 8080,
+    "host": "localhost",
+    "open": true
+  }
 }
