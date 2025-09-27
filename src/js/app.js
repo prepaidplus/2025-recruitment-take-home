@@ -8,6 +8,7 @@ import "framework7/css/bundle";
 import App from "../app.f7";
 import "../css/icons.css";
 import "../css/app.css";
+import AuthStore from "./js/authStore.js";
 
 var app = new Framework7({
     name: "Prepaid+ Merchant Portal", // App name
@@ -24,6 +25,37 @@ var app = new Framework7({
     routes: routes,
 });
 
+// Session Management and route guard
+// Code snippet to enforce redirect to login for protected
+// pages and attach the token to outbound requests
+
+app.on("routeChangeStart", async (routeTo, routeFrom, router) => {
+    // simple guard: if route path starts with '/auth' then allow.
+    const publicPaths = [
+        "/auth/login",
+        "/auth/register",
+        "/auth/reset-request",
+        "/auth/reset-password",
+        "/",
+    ];
+    const reqPath = routeTo.path;
+    const isPublic = publicPaths.some((p) => reqPath.startsWith(p));
+    if (isPublic) return;
+
+    const token = await AuthStore.getToken();
+    if (!token) {
+        // redirect to login
+        router.navigate("/auth/login/");
+    }
+});
+
+// Added a helper to include token on fetch calls
+window.authFetch = async (url, options = {}) => {
+    const token = await AuthStore.getToken();
+    options.headers = options.headers || {};
+    if (token) options.headers["Authorization"] = `Bearer ${token}`;
+    return fetch(url, options);
+};
 /**
  * Initializes the app by setting up the necessary controllers and services.
  *

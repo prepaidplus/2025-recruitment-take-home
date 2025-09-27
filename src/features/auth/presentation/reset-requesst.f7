@@ -1,0 +1,57 @@
+<template>
+  <div class="page" data-name="reset-request">
+    <div class="navbar"><div class="navbar-inner sliding"><div class="title">Reset password</div></div></div>
+    <div class="page-content">
+      <div class="block">
+        <form id="reset-request-form">
+          <div class="list no-hairlines-md">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Email</div>
+                  <div class="item-input-wrap"><input name="email" type="email" required/></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="block"><button class="button button-fill" type="submit">Send reset email</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import RestAPIService from "../../../services/restAPIService.js";
+import AuthService from "../../../js/authService.js";
+
+export default () => { return $render; };
+
+export async function onPageInit(e, page) {
+  const app = page.app;
+  const form = page.$el.querySelector('#reset-request-form');
+  const authSvc = new AuthService(new RestAPIService({
+    dataToPayload: (d) => JSON.stringify(d),
+    payloadToData: (p) => p,
+    getUrl: (route) => route,
+  }));
+
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const fd = new FormData(form);
+    const email = fd.get('email');
+    app.preloader.show();
+    try {
+      await authSvc.requestPasswordReset({ email });
+      app.preloader.hide();
+      app.dialog.alert('If this email exists, a reset link was sent.');
+      app.views.main.router.navigate('/');
+    } catch (err) {
+      app.preloader.hide();
+      app.dialog.alert(err.message || 'Request failed');
+    }
+  });
+}
+
+export const pageInit = onPageInit;
