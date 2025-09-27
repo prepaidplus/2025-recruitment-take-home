@@ -1,0 +1,76 @@
+<template>
+  <div class="page" data-name="register">
+    <div class="navbar"><div class="navbar-inner sliding"><div class="title">Register</div></div></div>
+    <div class="page-content">
+      <div class="block">
+        <form id="register-form">
+          <div class="list no-hairlines-md">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Business name</div>
+                  <div class="item-input-wrap"><input name="businessName" required /></div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Contact email</div>
+                  <div class="item-input-wrap"><input name="email" type="email" required /></div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Password</div>
+                  <div class="item-input-wrap"><input name="password" type="password" required minlength="8"/></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <button class="button button-fill" type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import RestAPIService from "../../../services/restAPIService.js";
+import AuthService from "../../../js/authService.js";
+
+export default () => { return $render; };
+
+export async function onPageInit(e, page) {
+  const app = page.app;
+  const form = page.$el.querySelector('#register-form');
+  const authSvc = new AuthService(new RestAPIService({
+    dataToPayload: (d) => JSON.stringify(d),
+    payloadToData: (p) => p,
+    getUrl: (route) => route,
+  }));
+
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const fd = new FormData(form);
+    const payload = {
+      businessName: fd.get('businessName'),
+      email: fd.get('email'),
+      password: fd.get('password'),
+    };
+
+    app.preloader.show();
+    try {
+      const res = await authSvc.register(payload);
+      app.preloader.hide();
+      app.dialog.alert('Registration successful. Please wait for admin approval.');
+      app.views.main.router.navigate('/');
+    } catch (err) {
+      app.preloader.hide();
+      app.dialog.alert(err.message || 'Registration failed');
+    }
+  });
+}
+
+export const pageInit = onPageInit;
