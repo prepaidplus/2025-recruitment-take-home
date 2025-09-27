@@ -1,3 +1,5 @@
+//Added routes for new auth pages, augmenting existing routes
+
 import NotFoundPage from "../features/home/presentation/404.f7";
 import Home from "../features/home/presentation/home.f7";
 import Login from "../features/auth/presentation/login.f7";
