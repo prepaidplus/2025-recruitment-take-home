@@ -1,0 +1,57 @@
+<div class="page" data-name="login">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="if-not-md">Back</span>
+                </a>
+            </div>
+            <div class="title">Login</div>
+        </div>
+    </div>
+    
+    <div class="page-content">
+        <div class="block">
+            <div class="login-logo">
+                <img src="assets/logo.png" alt="Prepaid Plus" />
+            </div>
+            
+            <form id="login-form" class="list">
+                <div class="list">
+                    <ul>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Email</div>
+                                <div class="item-input-wrap">
+                                    <input type="email" name="email" placeholder="Enter your email" required />
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Password</div>
+                                <div class="item-input-wrap">
+                                    <input type="password" name="password" placeholder="Enter your password" required />
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="block">
+                    <button type="submit" class="button button-large button-fill color-blue">Login</button>
+                </div>
+                
+                <div class="block text-align-center">
+                    <a href="/forgot-password/" class="link">Forgot Password?</a>
+                </div>
+            </form>
+            
+            <div id="login-error" class="block error-message" style="display: none;"></div>
+        </div>
+    </div>
+</div>

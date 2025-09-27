@@ -1,0 +1,80 @@
+<div class="page" data-name="register">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="if-not-md">Back</span>
+                </a>
+            </div>
+            <div class="title">Register Merchant</div>
+        </div>
+    </div>
+    
+    <div class="page-content">
+        <div class="block">
+            <form id="register-form" class="list">
+                <div class="list">
+                    <ul>
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Business Name</div>
+                                <div class="item-input-wrap">
+                                    <input type="text" name="businessName" placeholder="Enter business name" required />
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Contact Person Name</div>
+                                <div class="item-input-wrap">
+                                    <input type="text" name="name" placeholder="Enter your name" required />
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Email</div>
+                                <div class="item-input-wrap">
+                                    <input type="email" name="email" placeholder="Enter email address" required />
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Phone Number</div>
+                                <div class="item-input-wrap">
+                                    <input type="tel" name="phone" placeholder="Enter phone number" required />
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-title item-label">Address</div>
+                                <div class="item-input-wrap">
+                                    <input type="text" name="address" placeholder="Enter business address" />
+                                    <span class="input-clear-button"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="block">
+                    <button type="submit" class="button button-large button-fill color-green">Register Merchant</button>
+                </div>
+            </form>
+            
+            <div id="register-error" class="block error-message" style="display: none;"></div>
+            <div id="register-success" class="block success-message" style="display: none;"></div>
+        </div>
+    </div>
+</div>
